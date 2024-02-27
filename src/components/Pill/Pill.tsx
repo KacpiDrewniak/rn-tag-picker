@@ -5,7 +5,7 @@ import {styles} from './Pill.styled.ts';
 import React from 'react';
 export const Pill: FC<
   Tag & {onPress?: (event: GestureResponderEvent) => void}
-> = ({label, state, onPress}) => {
+> = ({label, state, onPress, level}) => {
   return (
     <TouchableOpacity
       onPress={onPress}
@@ -14,7 +14,9 @@ export const Pill: FC<
         state === 'temporary' && styles.temporary,
         state === 'saved' && styles.saved,
       ]}>
-      <Text>{label}</Text>
+      <Text>
+        {label} {level && `(${level})`}
+      </Text>
     </TouchableOpacity>
   );
 };

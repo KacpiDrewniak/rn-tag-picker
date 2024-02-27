@@ -9,4 +9,5 @@ export type Tag = {
   id: string;
   isLevel: boolean;
   categoryId: string;
+  level?: number;
 };

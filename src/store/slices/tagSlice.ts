@@ -14,11 +14,16 @@ export const tagSlice = createSlice({
     loadTags: (state, action: PayloadAction<Tag[]>) => {
       state.tags = action.payload;
     },
-    setTemporaryToggleTag: (state, action: PayloadAction<string>) => {
-      const tag = state.tags.find(t => t.id === action.payload)!;
+    setTemporaryToggleTag: (
+      state,
+      action: PayloadAction<{id: string; level?: number}>,
+    ) => {
+      const tag = state.tags.find(t => t.id === action.payload.id)!;
       if (tag.state === 'temporary') {
         tag.state = undefined;
+        tag.level = undefined;
       } else {
+        tag.level = action.payload.level;
         tag.state = 'temporary';
       }
     },

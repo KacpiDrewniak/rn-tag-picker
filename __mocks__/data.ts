@@ -32,7 +32,7 @@ export const tags: Tag[] = [
   {
     label: 'Ratatouille',
     id: 'ratatouille',
-    isLevel: false,
+    isLevel: true,
     categoryId: 'kuchnia-francuska',
   },
   {
@@ -44,7 +44,7 @@ export const tags: Tag[] = [
   {
     label: 'Spaghetti bolognese',
     id: 'spaghetti-bolognese',
-    isLevel: false,
+    isLevel: true,
     categoryId: 'kuchnia-wloska',
   },
   {
@@ -57,7 +57,7 @@ export const tags: Tag[] = [
   {
     label: 'Risotto',
     id: 'risotto',
-    isLevel: false,
+    isLevel: true,
     categoryId: 'kuchnia-wloska',
   },
   {
@@ -69,7 +69,7 @@ export const tags: Tag[] = [
   {
     label: 'Pad thai',
     id: 'pad-thai',
-    isLevel: false,
+    isLevel: true,
     categoryId: 'kuchnia-azjatycka',
   },
   {
@@ -81,7 +81,7 @@ export const tags: Tag[] = [
   {
     label: 'Ramen',
     id: 'ramen',
-    isLevel: false,
+    isLevel: true,
     categoryId: 'kuchnia-azjatycka',
   },
   {
@@ -93,7 +93,7 @@ export const tags: Tag[] = [
   {
     label: 'Smażony ryż',
     id: 'smażony-ryż',
-    isLevel: false,
+    isLevel: true,
     categoryId: 'kuchnia-azjatycka',
   },
 ];
