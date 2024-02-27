@@ -24,18 +24,10 @@ export const Category: FC<CategoryProps> = ({id, label}) => {
   ) => {
     if (isLevel && state !== 'temporary') {
       Alert.alert('Wybierz poziom', '', [
-        {
-          text: '1',
-          onPress: () => dispatch(setTemporaryToggleTag({id, level: 1})),
-        },
-        {
-          text: '2',
-          onPress: () => dispatch(setTemporaryToggleTag({id, level: 2})),
-        },
-        {
-          text: '3',
-          onPress: () => dispatch(setTemporaryToggleTag({id, level: 2})),
-        },
+        ...[1, 2, 3].map(level => ({
+          text: `${level}`,
+          onPress: () => dispatch(setTemporaryToggleTag({id, level})),
+        })),
         {
           text: 'cancel',
         },
