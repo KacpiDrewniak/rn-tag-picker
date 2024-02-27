@@ -2,18 +2,12 @@ import {SafeAreaView, Text, View} from 'react-native';
 import {useEffect, useMemo} from 'react';
 import React from 'react';
 import {categories} from '../../__mocks__';
-import {Category} from '../components/Category/Category.tsx';
-import {useAppDispatch, useAppSelector} from '../store';
-import {loadTags} from '../store/slices';
+import {useAppDispatch, loadTags} from '../store';
 import {actionGetTags} from '../action/action.getTags.ts';
 import * as Progress from 'react-native-progress';
-import {width} from '../hooks/useDimentions.ts';
-import {Summary} from '../components/Summary';
-import {Hello} from '../components/Hello';
-import {TagWrapper} from '../components/TagWrapper';
-import {Pill} from '../components/Pill/Pill.tsx';
-import {useTab} from '../store/selectors/tabs.ts';
-import {useTagsSelector} from '../store/selectors/tags.ts';
+import {width} from '../hooks';
+import {Summary, Hello, TagWrapper, Pill, Category} from '../components';
+import {useTab, useTagsSelector} from '../store';
 import {styles} from './Navigation.styled.ts';
 
 const content = [
@@ -39,7 +33,7 @@ export const Navigation = () => {
     <SafeAreaView style={styles.container}>
       <View>
         <Progress.Bar progress={tab / 4} width={width - 40} />
-        <Text>Obecne tagi:</Text>
+        <Text>Obecne zapisane tagi:</Text>
         <TagWrapper>
           {tags
             .filter(e => e.state === 'saved')

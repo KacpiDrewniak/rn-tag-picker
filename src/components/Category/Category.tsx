@@ -2,14 +2,12 @@ import {Alert, Text, View} from 'react-native';
 import {FC} from 'react';
 import {Category as CategoryType} from '../../types';
 import React from 'react';
-import {useTagsSelector} from '../../store/selectors/tags.ts';
 import {Pill} from '../Pill';
-import {next, previous, useAppDispatch} from '../../store';
+import {useAppDispatch, useTagsSelector} from '../../store';
 
 import {setTemporaryToggleTag} from '../../store';
 import {TagWrapper} from '../TagWrapper';
-import {Button} from '../Button';
-import {Buttons} from '../Buttons/Buttons.tsx';
+import {Buttons} from '../Buttons';
 type CategoryProps = CategoryType & {};
 
 export const Category: FC<CategoryProps> = ({id, label}) => {

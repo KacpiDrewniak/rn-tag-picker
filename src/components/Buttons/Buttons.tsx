@@ -1,7 +1,6 @@
 import {Alert, View} from 'react-native';
-import {next, previous} from '../../store/slices/tabSlice.ts';
+import {next, previous, useAppDispatch} from '../../store';
 import React, {FC} from 'react';
-import {useAppDispatch} from '../../store';
 import {Button} from '../Button';
 import {styles} from './Button.styled.ts';
 
